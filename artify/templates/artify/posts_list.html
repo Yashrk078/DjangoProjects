@@ -1,7 +1,5 @@
-{% extends 'artify/base.html' %}
-{%load static%}
 <!doctype html>
-{%block content%}
+{% include "artify/base.html" %}
 <html>
 <title>Artify</title>
 <body>{%for post in object_list%}
@@ -14,7 +12,5 @@
         <em>{{post.created}}</em><br/>{{post.description}}
     </p>
     {% endfor %}
-
 </body>
-{%endblock%}
 </html>
