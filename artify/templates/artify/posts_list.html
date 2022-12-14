@@ -1,8 +1,8 @@
 <!doctype html>
-{% include "artify/base.html" %}
-<html>
-<title>Artify</title>
-<body>{%for post in object_list%}
+{% extends 'artify/base.html' %}
+{% block content %}
+<button ><a href='/artify/new/'>Post Something</a></button><br/><br/>
+{%for post in object_list%}
     <strong>
         {{post.author.username}}
     <br/>
@@ -12,5 +12,4 @@
         <em>{{post.created}}</em><br/>{{post.description}}
     </p>
     {% endfor %}
-</body>
-</html>
+    {% endblock %}
